@@ -22,6 +22,7 @@ class ExerciseList extends Component {
       this.state = {
         exercises:[]
       }
+      this.deleteExercise = this.deleteExercise.bind(this);
     }
 
   componentDidMount(){
@@ -37,9 +38,11 @@ class ExerciseList extends Component {
   deleteExercise(id){
     axios.delete('http://localhost:5000/exercises/'+id)
     .then(res=>console.log(res.data));
-  this.setState({
+
+
+    this.setState({
     exercises:this.state.exercises.filter(el=>el._id!==id)
-  })
+   })
   } 
 
   exerciseList(){
