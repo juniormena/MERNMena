@@ -75,7 +75,7 @@ class CreateExercise extends Component {
     .catch(err=>console.log(err))
 
 
-    //window.location = '/'
+    window.location = '/'
   }
 
 
